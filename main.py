@@ -45,7 +45,8 @@ async def help(ctx, args=None):
     await ctx.send(embed=embed)
 
 
+# Starting a bot
 @bot.event
 async def on_ready():
     print('Bot started.')
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Hoshino Gang'))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name='Wersario`s development'))
