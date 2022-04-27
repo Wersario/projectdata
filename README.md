@@ -2,7 +2,7 @@
 
 ## General description
 
-This bot bot was created to help you monitor and analyze your server's activity.\
+This bot was created to help you monitor and analyze your server's activity.\
 If you are a rookie programmer, it will also help you get acquainted with discord.py and pandas.
 
 ## Creating a bot
@@ -25,8 +25,7 @@ click on the square next to the bot, and finally just copy a link. After that, j
     - run ``pip install discord`` and ``pip install pandas`` in your console.
     - if your program can install libraries from *requirements.txt*, then just simply click install.
     
-3. You are almost done! Now you just need to create a file called *token.txt* and there a token from your bot.
-It will use it to login.
+3. You are almost done! Now you just need to create a file called *token.txt* and there you will put a token from your bot.
 
 
 ## Automation using heroku
