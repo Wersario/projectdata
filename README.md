@@ -1,9 +1,18 @@
-# Discord analytics bot
+# Discord programmer vacancies finder
 
 ## General description
 
-This bot was created to help you monitor and analyze your server's activity.\
+This bot was created to help you find programmer vacancies on [HeadHunter.ru](https://hh.ru/).\
 If you are a rookie programmer, it will also help you get acquainted with discord.py and pandas.
+
+## Creating an account
+
+To create your discord profile you need to visit [discord websote](https://discord.com/). Here you can download their app
+or straight go to creating your account by clicking on top right button 'login'. Instead of logging you need to click 'Register' and finally create your account.
+
+After you did everything above, your next step is to create a testing area. You need to locate '+' sign in the left bottom corner.
+Then you should follow this sequence: Click '+' -> 'Create my Own' -> 'For me and my friends' -> Name it and click on the blue button.
+You've just created your first discord server!
 
 ## Creating a bot
 
@@ -21,9 +30,8 @@ click on the square next to the bot, and finally just copy a link. After that, j
 1. First of all, you have to download all files on your personal computer. The code runs on python 3,
  which you can download on [python.org](https://www.python.org/downloads/).
  
-2. After successful installation you will have to download some libraries for your bot. There are two variants:
-    - run ``pip install discord`` and ``pip install pandas`` in your console.
-    - if your program can install libraries from *requirements.txt*, then just simply click install.
+2. After successful installation you will have to download some libraries for your bot.\
+You should run `pip install -r requirements.txt` in your terminal and it will automatically install everything.
     
 3. You are almost done! Now you just need to create a file called *token.txt* and there you will put a token from your bot.
 
