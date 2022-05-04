@@ -23,7 +23,7 @@ After that is done, you need to go to the bot tab and then click on the button c
 After you created you first discord bot, you have to copy its token and save it somewhere, so nobody can see it.
 
 To invite your bot to the server, simply go to the tab called "0Auth2", then go to the "URL Generator" tab, 
-click on the square next to the title 'bot', and finally just copy a link. After that, just paste it in your browser and bot will automatically join the server you chose.
+click on the square next to the title 'bot', click on the square next to the title 'Administrator', and finally just copy a link. After that, just paste it in your browser and bot will automatically join the server you chose.
 
 ## How to use your bot?
 
