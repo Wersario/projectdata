@@ -1,4 +1,4 @@
-# Discord programmer vacancies finder
+# Discord programmer vacancies bot-finder
 
 ## General description
 
@@ -7,7 +7,7 @@ If you are a rookie programmer, it will also help you get acquainted with discor
 
 ## Creating an account
 
-To create your discord profile you need to visit [discord websote](https://discord.com/). Here you can download their app
+To create your discord profile you need to visit [discord website](https://discord.com/). Here you can download their app
 or straight go to creating your account by clicking on top right button 'login'. Instead of logging you need to click 'Register' and finally create your account.
 
 After you did everything above, your next step is to create a testing area. You need to locate '+' sign in the left bottom corner.
