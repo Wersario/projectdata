@@ -25,6 +25,10 @@ After you created you first discord bot, you have to copy its token and save it 
 To invite your bot to the server, simply go to the tab called "0Auth2", then go to the "URL Generator" tab, 
 click on the square next to the bot, and finally just copy a link. After that, just paste it in your browser and bot will automatically join the server you chose.
 
+## How to use your bot?
+
+Default prefix for your bot is '!' but you can change that in your code. To get acquainted with all of the commands, you should write !help in any chat and read what bot sent to you. There will be a description for every available command. To use other command write ![command name].
+
 ## Installation
 
 1. First of all, you have to download all files on your personal computer. The code runs on python 3,
