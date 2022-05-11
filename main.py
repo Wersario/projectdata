@@ -2,6 +2,7 @@ import discord
 import requests
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from discord.ext import commands
 from descriptions import desc, key_words
 
@@ -23,6 +24,11 @@ bot.run('TOKEN')
 # creating custom help command
 @bot.command()
 async def help(ctx, args=None):
+    '''
+        Creates a circle diagram of ratio between unknown jobs, casual jobs, and programmer jobs.
+        Needs 2 arguments: start - id of the first vacation and end - id of the last vacation. It will create an interval,
+        where function will compare amounts.
+    '''
     embed = discord.Embed(title="I am here to help you.")
     command_names_list = [com.name for com in bot.commands]
 
@@ -87,6 +93,10 @@ async def make_diagram(ctx, start, end):
 
 @bot.command()
 async def get_vacancies(ctx, start, end):
+    '''
+        Gives you all programmer vacancies in chosen interval. Needs 2 arguments: start - id of the first vacation and end
+        - id of the last vacation.
+    '''
     link = 'https://api.hh.ru/vacancies/'
     template = 'https://hh.ru/vacancy/'
     for num in range(start, end):
@@ -98,3 +108,47 @@ async def get_vacancies(ctx, start, end):
                 await ctx.channel.send(f'{r.json()["name"]}, опыт работы: {r.json()["experience"]["name"]}. Ссылка: {template+str(num)}')
 
         await ctx.channel.send('That`s all!')
+
+
+@bot.command()
+async def make_dataset(ctx, start, end):
+    '''
+        Creates a data set about all vacancies.  Needs 2 arguments: start - id of the first vacation and end -
+        id of the last vacation.
+    '''
+    link = 'https://api.hh.ru/vacancies/'
+    template = 'https://hh.ru/vacancy/'
+    data = {
+        'Name': [],
+        'Experience': [],
+        'Salary': [],
+        'City': [],
+        'Street': [],
+        'Link': []
+    }
+    for num in range(start, end):
+        r = requests.get(link + str(num))
+        if r.json()['description'] == 'Not Found':
+            continue
+        for word in key_words:
+            if word in r.json()['name']:
+                data['Name'].append(r.json()['Name'])
+                if r.json()['experience'] is None:
+                    data['Experience'].append(np.nan)
+                else:
+                    data['Experience'].append(r.json()['experience'])
+                if r.json()['salary']['from'] is None:
+                    data['Salary'].append(np.nan)
+                else:
+                    data['Salary'].append(f"{r.json()['salary']['from'] + r.json()['salary']['currency']}")
+                if r.json()['address']['city'] is None:
+                    data['City'].append(np.nan)
+                else:
+                    data['City'].append(r.json()['address']['city'])
+                if r.json()['address']['street'] is None:
+                    data['Street'].append(np.nan)
+                else:
+                    data['Street'].append(r.json()['address']['street'])
+                data['Link'].append(template + str(num))
+
+        await ctx.channel.send(pd.DataFrame(data))
