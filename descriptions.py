@@ -7,6 +7,10 @@ desc = {
     'get_vacancies': '''
     Gives you all programmer vacancies in chosen interval. Needs 2 arguments: start - id of the first vacation and end
     - id of the last vacation.
+    ''',
+    'make_dataset': '''
+    Creates a data set about all vacancies.  Needs 2 arguments: start - id of the first vacation and end -
+    id of the last vacation.
     '''
 }
 
