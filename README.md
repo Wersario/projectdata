@@ -1,4 +1,4 @@
-# Discord programmer vacancies finder
+# Discord programmer vacancies bot-finder
 
 ## General description
 
@@ -7,7 +7,7 @@ If you are a rookie programmer, it will also help you get acquainted with discor
 
 ## Creating an account
 
-To create your discord profile you need to visit [discord websote](https://discord.com/). Here you can download their app
+To create your discord profile you need to visit [discord website](https://discord.com/). Here you can download their app
 or straight go to creating your account by clicking on top right button 'login'. Instead of logging you need to click 'Register' and finally create your account.
 
 After you did everything above, your next step is to create a testing area. You need to locate '+' sign in the left bottom corner.
@@ -23,7 +23,11 @@ After that is done, you need to go to the bot tab and then click on the button c
 After you created you first discord bot, you have to copy its token and save it somewhere, so nobody can see it.
 
 To invite your bot to the server, simply go to the tab called "0Auth2", then go to the "URL Generator" tab, 
-click on the square next to the bot, and finally just copy a link. After that, just paste it in your browser and bot will automatically join the server you chose.
+click on the square next to the title 'bot', click on the square next to the title 'Administrator', and finally just copy a link. After that, just paste it in your browser and bot will automatically join the server you chose.
+
+## How to use your bot?
+
+Default prefix for your bot is '!' but you can change that in your code. To get acquainted with all of the commands, you should write !help in any chat and read what bot sent to you. There will be a description for every available command. To use other command write ![command name].
 
 ## Installation
 
